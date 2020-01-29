@@ -531,9 +531,9 @@ sparsities = 0.1:0.1:0.9;
 nBreaks = floor((1-sparsities)*size(combs,1));
 for m = 1:length(sparsities)+2
     for i = 1:1000
-        %     L = exp(randn(n));
-        energies = randn(n,1)/3;
-        L = exp(-(energies-energies'));
+        L = exp(randn(n)/3);
+%         energies = randn(n,1)/3;
+%         L = exp(-(energies-energies'));
         if m==2
             tmp_s = size(L,1);
             tmp_o = sqrt(tmp_s);
